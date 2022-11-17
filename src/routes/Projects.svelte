@@ -3,41 +3,71 @@
 <script>
     import MediaQuery from '/src/coms/MediaQuery.svelte';
     import {link} from 'svelte-spa-router';
+    let border = 'border-[0px]'
 </script>
-<div>
-    <div class = "snap-y snap-mandatory w-full h-screen pt-28 md:pt-60 overflow-scroll border-0">
-        <div class="snap-start border-0 hero max-h-full">
-            <div class="hero-content flex-col lg:flex-row p-5 h-full border-0 w-full">
+<MediaQuery query="(max-width: 720px)" let:matches>
 
-
-                <MediaQuery query="(max-width: 480px)" let:matches>
-
-                    <div class = "prose border-0">
-                        <h1 class ="text-6xl lg:text-7xl">
-                            Hey there you I’m alvin 👋🏻
-                        </h1>
-                        <p class = "text-l lg:text-xl">
-                            An undergardute IT student in his sernior year, that aspires to be an intern in your organization. Has a background in software dev, graphic design and animation, yet he pursued the field that sparked his interests the most, Data Science.
-                        </p>
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <a class="btn btn-secondary" use:link={"/About"}>Get Started</a>
+<div class = "w-full h-screen">
+    <div class = "{border} w-full h-screen pt-32 md:pt-40 flex justify-center">
+        <div class="mockup-window border bg-base-300 mx-3 h-4/5 md:w-3/4 md:h-auto md:my-12">
+            <div class="snap-y snap-mandatory px-4 py-4 bg-base-200 w-full h-full overflow-y-scroll">
+                {#each [1,2,3,4,5,6,7,8,9,10] as x}
+                    <div class="snap-start h-full py-3 px-5 flex flex-row">
+                        <div class = "prose p-5">
+                            <h2>
+                     
+                                The Implementation of PLM University Admissions Chatbot Using Azure Bot Framework
+                  
+                            </h2>
     
-                    </div>
-                    {#if matches == false}
-                        <div class = "mx-16 w-1/2">
-                            <img src="https://placeimg.com/260/400/arch" class="rounded-lg shadow-2xl" />
+                            <p>
+                               The PLMHelps chatbot was the final college project that I developed together with two of my thesismates in order to graduate. It's currently pending for publication and oral presentation in the 2022 5th Artificial Intelligence and Cloud Computing Conference.
+                                <br>
+                                DOI: <a href="">PENDING</a>
+                            </p>
+                            {#if matches}
+                        
+                                <a  class = 'btn btn-accent max-w-max' href = "https://bit.ly/PLMHelps">
+                                    TRY IT HERE
+                                </a>
+                    
+                            {/if}
+        
                         </div>
+                        {#if !matches}
+                            <div class="divider divider-horizontal"></div>
+                            <div class= 'self-center w-0 md:w-1/2'>
+                                
+                                <div class="card w-50 h-96 bg-base shadow-sm image-full">
+                                    <figure><img src="/src/lib/sc/1.png"></figure>
+                                    <div class="card-body justify-center">
+                                        <a  class = 'btn btn-accent max-w-max self-center' href = "https://bit.ly/PLMHelps">
+                                            TRY IT HERE
+                                        </a>
+                                    </div>
+                                </div>
+        
+                            </div>
 
-                    {/if}
-  
-                </MediaQuery>
-                
+                        {/if}
 
+                    </div>
 
+                {/each}
             </div>
         </div>
-
-        
     </div>
 </div>
+</MediaQuery>
 
+
+<!-- 
+
+            {#each [1,2,3,4,5,6,7,8,9,10] as x}
+            <div class="snap-start">
+                <div class="grid card bg-base-300 rounded-box place-items-center h-fit px-5 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur malesuada lacus, euismod blandit nunc elementum quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam bibendum enim ac nisl varius, quis tempor leo dictum. Suspendisse potenti. Sed tincidunt interdum sem, in lacinia ligula eleifend nec. Proin eleifend, nunc accumsan finibus ornare, neque nulla laoreet lorem, sodales bibendum nibh eros eu lorem. Aenean ultricies rhoncus purus, et molestie mauris molestie non. Nulla a blandit nibh. Nulla malesuada, quam eu gravida pretium, ligula libero consequat lorem, vitae feugiat lacus quam in orci. Sed vel accumsan velit, a dignissim orci. Pellentesque dapibus porttitor ex in vestibulum. Cras in cursus nibh, lobortis molestie ante. Curabitur tellus augue, commodo quis enim eu, fringilla pharetra nulla.</div> 
+            </div>
+            <div class="divider"></div> 
+        
+
+ -->
