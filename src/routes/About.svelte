@@ -1,14 +1,10 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script>
-    import MediaQuery from './coms/MediaQuery.svelte';
-    import Nav from './coms/Nav.svelte';
+    import MediaQuery from '/src/coms/MediaQuery.svelte';
     import {link} from 'svelte-spa-router';
 </script>
 <div class = "ease-in-out duration-300">
-    <div>
-        <Nav/>
-    </div>
     <div class = "snap-y snap-mandatory w-full h-screen pt-28 md:pt-60 overflow-scroll border-0">
         <div class="snap-start border-0 hero max-h-full">
             <div class="hero-content flex-col lg:flex-row p-5 h-full border-0 w-full">

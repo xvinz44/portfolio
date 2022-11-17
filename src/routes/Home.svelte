@@ -1,6 +1,6 @@
 <script>
-    import Nav from './coms/Nav.svelte';
-    import MediaQuery from './coms/MediaQuery.svelte';
+
+    import MediaQuery from '/src/coms/MediaQuery.svelte';
 
     import {link} from 'svelte-spa-router'
     function scrollIntoView({ target }) {
@@ -15,10 +15,6 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <div class = "w-full h-screen">
-    <div class = "z-100">
-        <Nav/>
-    </div>
-    
     <div class = "snap-y snap-mandatory w-full h-screen pt-28 md:pt-60 overflow-scroll border-0">
         <div class="snap-start border-0 hero max-h-full">
             <div class="hero-content flex-col lg:flex-row p-5 h-full border-0 w-full">
@@ -32,7 +28,7 @@
                             An undergardute IT student in his sernior year, that aspires to be an intern in your organization. Has a background in software dev, graphic design and animation, yet he pursued the field that sparked his interests the most, Data Science.
                         </p>
                         <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <a class="btn btn-secondary" use:link={"/Contact"}>Get Started</a>
+                        <a class="btn btn-secondary" use:link={"/Projects"}>Explore projects!</a>
     
                     </div>
                     {#if matches == false}
